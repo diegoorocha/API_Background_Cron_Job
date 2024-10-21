@@ -38,7 +38,7 @@ namespace API_Background.Services
 
         public async Task<IEnumerable<Venda>> ObterVendasValidasNaoProcessadas()
         {
-            return await _vendaRepository.ObterTodosAsync(v => v.VendaValida == VendaValida.Sim && v.Processado == false);
+            return await _vendaRepository.ObterTodosAsync(v => v.VendaValida == VendaValida.Nao && v.Processado == false);
         }
 
         public async Task ProcessarVendasAsync()
